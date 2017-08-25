@@ -51,14 +51,10 @@ public class MyArrayList <T>  {
     }
 
     public void remove(int index){
-        T[]b = (T[])new Object[item.length - 1];
-        item[index] = null;
-        for(int i = index; i < item.length - 1; i++){
-            item[i] = item[i + 1];
-        }
-        System.arraycopy(item,0,b,0,item.length - 1);
-        item = b;
-        size--;
+        int numMoved = size - index - 1;
+        if (numMoved > 0)
+            System.arraycopy(item, index+1, item, index, numMoved);
+        item[--size] = null;
     }
     public void clear(){
         for(int i = 0; i < item.length; i++)
