@@ -16,13 +16,14 @@ public class Main {
         String[] animals = new String[]{"cat", "dog", "pig", "dragon", "elephant"};
         MyArrayList<String> list = new MyArrayList<String>(animals);
         list.add("rereyz");
-        list.add("ddsgdsgdfgdfz");
-        list.remove(list.size() - 1);
+
+
+
 
 
        for(int i = 0; i < list.size(); i++){
            System.out.println(list.getIndex(i));
-        }
+       }
         MyStack<String>stringMyStack = new MyStack<>(5);
         stringMyStack.push("Кот");
         stringMyStack.push("Кот1");

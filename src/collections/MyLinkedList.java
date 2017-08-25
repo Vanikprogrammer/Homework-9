@@ -34,10 +34,11 @@ public class MyLinkedList <T> {
                 else
                     prev = current;
                     current = current.next;
-            if(current==first)
-            {first = first.next;
+            if(current==first) {
+                first = first.next;
             size--;}
-            else{ prev.next = current.next;
+            else{
+                prev.next = current.next;
             size--;}
             }
             first = current;

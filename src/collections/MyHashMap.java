@@ -49,8 +49,9 @@ public class MyHashMap<K,V> {
     public int size(){
         return size;
     }
+
     public Node get(K key){
-        Node<K,V> x;
+        Node<K, V> x;
         for (x = first; x != null; ){
             if(x.key == key){
                 return x;
@@ -58,12 +59,12 @@ public class MyHashMap<K,V> {
         }return null;
     }
 
-    private class Node<K,V>{
+    private class Node<K, V>{
         K key;
         V value;
         Node<K,V> prev;
 
-        public Node(K key,V value , Node<K,V> prev){
+        public Node(K key, V value, Node<K,V> prev){
             this.value = value;
             this.key = key;
             this.prev = prev;
